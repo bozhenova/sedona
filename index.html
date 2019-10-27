@@ -23,6 +23,7 @@
   </head>
   <body>
     <header class="page-header">
+      <div class="container">
       <img
         src="img/logo.png"
         width="138"
@@ -48,8 +49,10 @@
           </ul>
         </div>
       </nav>
+      </div>
     </header>
     <main class="page-main">
+      <div class="container">
       <h1 class="visually-hidden">Главная страница Sedona</h1>
       <section class="features">
         <h2 class="features__title">
@@ -59,44 +62,44 @@
           Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
         </p>
         <ul class="features__list">
-          <li class="features__list-item">
-            <h3>Настоящий городок</h3>
-            <span>&#8470;1</span>
-            <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+          <li class="features__item list-item feature">
+            <h3 class="list-item__title list-item__title--town">Настоящий городок</h3>
+            <span class="list-item__number">&#8470;1</span>
+            <p class="list-item__description">Седона — не аттракцион для туристов, там течет своя жизнь</p>
           </li>
-          <ul class="list-item__description">
+          <ul class="feature__list">
             <li>
-              <h4>Жилье</h4>
-              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <h4 class="feature__title--accommodation">Жилье</h4>
+              <p class="feature__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li>
-              <h4>Еда</h4>
-              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <h4 class="feature__title--food">Еда</h4>
+              <p class="feature__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li>
-              <h4>Сувениры</h4>
-              <p>Не только китайского, но и местного производства!</p>
+              <h4 class="feature__title--souvenirs">Сувениры</h4>
+              <p class="feature__description">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
-          <li class="features__list-item">
-            <h3>Там есть Мост дьявола</h3>
-            <span>&#8470;2</span>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <li class="features__item list-item">
+            <h3 class="list-item__title list-item__title--bridge">Там есть Мост дьявола</h3>
+            <span class="list-item__number">&#8470;2</span>
+            <p class="list-item__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
           <li class="features__list-item">
-            <h3>Небольшая площадь</h3>
-            <span>&#8470;3</span>
-            <p>Все достопримечательности находятся очень близко</p>
+            <h3 class="list-item__title">Небольшая площадь</h3>
+            <span class="list-item__number">&#8470;3</span>
+            <p class="list-item__description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="features__list-item">
-            <h3>Красивая дорога</h3>
-            <span>&#8470;4</span>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="features__item list-item">
+            <h3 class="list-item__title">Красивая дорога</h3>
+            <span class="list-item__number">&#8470;4</span>
+            <p class="list-item__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="features__list-item">
-            <h3>Мало туристов</h3>
-            <span>&#8470;5</span>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="features__item list-item">
+            <h3 class="list-item__title">Мало туристов</h3>
+            <span class="list-item__number">&#8470;5</span>
+            <p class="list-item__desription">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
@@ -106,30 +109,38 @@
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <button class="booking__search">Поиск гостиницы в Седоне</button>
+        <button class="booking__search button button--brown">Поиск гостиницы в Седоне</button>
       </section>
       <div class="map">
         <div class="map__canvas">Интерактивная карта</div>
       </div>
     </main>
     <footer class="footer">
-      <a href="#" class="hashtag">#visitsedona</a>
-      <ul class="social">
-        <li><a href="#" class="social__btn social__btn--tw">Твиттер</li>
-        <li><a href="#" class="social__btn social__btn--fb">Фейсбук</li>
-        <li><a href="#" class="social__btn social__btn--yt">Ютуб</li>
-        <div class="copyright">Website by <a href="#" class="copyright__link"><img src="" width="" height="" alt=""></a></div>
+      <div class="container">
+      <a href="#" class="footer__hashtag">#visitsedona</a>
+      <ul class="footer__social social">
+        <li><a href="#" class="social__button social__button--tw">Твиттер</li>
+        <li><a href="#" class="social__button social__button--fb">Фейсбук</li>
+        <li><a href="#" class="social__button social__button--yt">Ютуб</li>
+        <div class="footer__copyright copyright">Website by <a href="#" class="copyright__link"><img src="" width="" height="" alt=""></a></div>
       </ul>
+      </div>
     </footer>
-    <div class="search-form">
-      <form action="" class="booking__form">
+    <div class="search">
+      <form action="" class="search__form">
         <input class="search-form__field" type="text" id="from" />
         <label class="search-form__label" for="from">Дата заезда:</label>
         <button type="button" class="search-form__calendar">Календарь</button>
         <input class="search-form__field" type="text" id="to" />
         <label class="search-form__label" for="to">Дата выезда:</label>
         <button type="button" class="search-form__calendar">Календарь</button>
+         <input class="search-form__field" type="text" id="adults" />
+         <label class="search-form__label" for="adults">Взрослые:</label>
+          <input class="search-form__field" type="text" id="children" />
+          <label class="search-form__label" for="children">Дети:</label>
+        <button type="submit" class="button button--blue">Найти</button>
       </form>
+    </div>
     </div>
     <script src="script.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
