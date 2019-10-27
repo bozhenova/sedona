@@ -17,11 +17,102 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
+  color: #000000;
   text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect (0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  margin-bottom: 55px;
+}
+
+.page-header__image-logo {
+  width: 138px;
+  height: 70px;
+  z-index: 2;
 }
 
 .container {
   width: auto;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 6%;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+}
+
+.main-nav {
+  background-color: #ffffff;
+  height: 55px;
+}
+
+.main-nav__wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 0 6%;
+}
+
+.site-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-list__item {
+  line-height: 26px;
+  width: 20%;
+}
+
+.site-list__item a {
+  color: inherit;
+  display: block;
+  font-weight: bold;
+  padding: 14px 0;
+}
+
+.site-list__item:nth-child(1),
+.site-list__item:nth-child(2) {
+  text-align: left;
+}
+
+.site-list__item:nth-child(4),
+.site-list__item:nth-child(5) {
+  text-align: right;
+}
+
+.promo::before {
+  content: "";
+  position: absolute;
+  background: url("img/Welcome.png") no-repeat 0 0;
 }
