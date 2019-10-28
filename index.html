@@ -23,46 +23,48 @@
   </head>
   <body>
     <div class="container">
+        <img class="showcase-bg" src="img/bg.jpg" alt="Фотография Седоны" width="1200" height="800">
     <header class="page-header">
-      <nav class="main-nav main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="#">Информация</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Фото и видео</a>
-            </li>
-      <img
+      <nav class="main-nav">
+      <a class="page-header__image-logo"><img
         src="img/logo.png"
         width="138"
         height="70"
         alt="Логотип Sedona"
-        class="page-header__image-logo"
-      />
+       
+      /></a>
+          <ul class="main-nav__menu site-list">
             <li class="site-list__item">
-              <a href="#">Карта штата</a>
+              <a class="site-list__item-link" href="#">Информация</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Гостиницы</a>
+              <a class="site-list__item-link" href="#">Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="#">Карта штата</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="#">Гостиницы</a>
             </li>
           </ul>
-        
       </nav>
-      
-      <div class="promo">
-        <img src="img/bg.jpg" alt="Фотография Седоны" width="1142" height="800">
-        </div>
     </header>
+
     <main class="page-main">
-      
+      <section class="showcase">
       <h1 class="visually-hidden">Главная страница Sedona</h1>
-      <section class="features">
-        <h2 class="features__title">
+      <img class="showcase__img" src="img/welcome.png" alt="Welcome to Sedona" width="458" height="352">
+      </section>
+      <section class="about">
+        <div class="about__info">
+        <h2 class="about__title">
           Седона — небольшой городок в Аризоне, заслуживающий большего!
         </h2>
-        <p class="features__intro">
+        <p class="about__lead">
           Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
         </p>
+        </div>
+      </section>
         <ul class="features__list">
           <li class="features__item list-item feature">
             <h3 class="list-item__title list-item__title--town">Настоящий городок</h3>
@@ -104,7 +106,6 @@
             <p class="list-item__desription">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
-      </section>
       <section class="booking">
         <h2 class="booking__title">Заинтересовались?</h2>
         <p class="booking__description">
@@ -116,18 +117,19 @@
       <div class="map">
         <div class="map__canvas">Интерактивная карта</div>
       </div>
+    
     </main>
     <footer class="footer">
       
       <a href="#" class="footer__hashtag">#visitsedona</a>
       <ul class="footer__social social">
-        <li><a href="#" class="social__button social__button--tw">Твиттер</li>
-        <li><a href="#" class="social__button social__button--fb">Фейсбук</li>
-        <li><a href="#" class="social__button social__button--yt">Ютуб</li>
+        <li><a href="#" class="social__button social__button--tw">Твиттер</a></li>
+        <li><a href="#" class="social__button social__button--fb">Фейсбук</a></li>
+        <li><a href="#" class="social__button social__button--yt">Ютуб</a></li>
         <div class="footer__copyright copyright">Website by <a href="#" class="copyright__link"><img src="" width="" height="" alt=""></a></div>
       </ul>
-      
     </footer>
+    </div>
     <div class="search">
       <form action="" class="search__form">
         <input class="search-form__field" type="text" id="from" />
@@ -143,7 +145,7 @@
         <button type="submit" class="button button--blue">Найти</button>
       </form>
     </div>
-    </div>
+    </section>
     <script src="script.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="map.js"></script>
