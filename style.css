@@ -185,31 +185,120 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-.features__list {
+.reasons__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.list-item {
-  width: 33%;
+.reasons__item {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  min-height: 256px;
+  overflow: hidden;
+}
+
+.reasons__item-info {
+  width: 33.33%;
+  min-height: 256px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-align: center;
+  padding: 47px 38px 39px;
+  flex-grow: 1;
+}
+.reasons__item-img {
+  position: relative;
+  width: 66.66%;
+  height: inherit;
+  background-color: #ffffff;
+}
+
+.reasons__item-img img {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  top: 50%;
+  height: inherit;
+  transform: translateY(-50%);
 }
 
 .list-item__title {
+  max-width: 160px;
   font-size: 21px;
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 23px;
 }
 
 .list-item__number,
 .list-item__description {
   font-size: 14px;
-
   font-weight: 400;
 }
+
 .list-item__description {
-  padding: 0;
   margin: 0;
+  margin-top: 21px;
+}
+
+.features {
+  padding: 56px 0 82px;
+}
+
+.features__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.features__item {
+  position: relative;
+  width: 33.33%;
+  padding: 105px 48px 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.features__title {
+  font-size: 21px;
+  margin: 0 0 23px;
+}
+
+.features__description {
+  margin: 0;
+}
+
+.features__item--accommodation::before {
+  content: "";
+  position: absolute;
+  background: url("img/accommodation.svg") center top no-repeat;
+  width: 75px;
+  height: 72px;
+  top: 4px;
+  left: 50%;
+  margin-left: -38px;
+}
+
+.features__item--food::before {
+  content: "";
+  position: absolute;
+  background: url("img/food.svg") center top no-repeat;
+  width: 74px;
+  height: 70px;
+  top: 4px;
+  left: 50%;
+  margin-left: -39px;
+}
+
+.features__item--souvenirs::before {
+  content: "";
+  position: absolute;
+  background: url("img/souvenirs.svg") center top no-repeat;
+  width: 64px;
+  height: 76px;
+  top: 4px;
+  left: 50%;
+  margin-left: -32px;
 }
