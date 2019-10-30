@@ -355,6 +355,242 @@ input[type="radio"].visually-hidden {
   margin: 0px;
 }
 
+.search__form-wrapper {
+  position: relative;
+  width: 568px;
+  margin: 0 auto;
+}
+
+.search-form {
+  position: absolute;
+  padding: 55px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  z-index: 1;
+}
+
+.search-form--show {
+  animation: formshow 0.7s forwards;
+}
+
+.search-form--hide {
+  animation: formhide 0.7s forwards;
+}
+
+@keyframes formshow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes formhide {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+    box-shadow: none;
+    transform-origin: top;
+  }
+}
+
+.search-form__row {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__row--columns {
+  justify-content: space-between;
+}
+
+.search-form__column {
+  display: flex;
+}
+
+.search-form__label {
+  display: block;
+  flex-shrink: 0;
+  width: 104px;
+  padding: 6px 15px 6px 0;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.search-form__input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-form__input {
+  padding: 6px 15px;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 26px;
+  height: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #f2f2f2;
+  width: 100%;
+  outline: 0;
+}
+
+.search-form__calendar-btn {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 39px;
+  height: 38px;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.search-form__calendar-icon {
+  fill: #cacaca;
+}
+
+.search-form__calendar-btn:hover .search-form__calendar-icon,
+.search-form__calendar-btn:focus .search-form__calendar-icon {
+  fill: #000000;
+}
+
+.search-form__calendar-btn:active .search-form__calendar-icon {
+  fill: #81b3d2;
+}
+
+.search-form__input-wrapper--calendar .search-form__input {
+  padding-right: 45px;
+}
+
+.search-form__row + .search-form__row {
+  margin-top: 29px;
+}
+
+.search-form__input-wrapper--counter {
+  display: flex;
+  width: 114px;
+  flex-shrink: 0;
+}
+
+.search-form__input-control {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: 0;
+}
+
+.search-form__input-wrapper--counter .search-form__input {
+  width: 38px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.search-form__input-control--minus::before,
+.search-form__input-control--plus::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  width: 3px;
+  height: 11px;
+  border-radius: 1px;
+  background-color: #a9a9a9;
+}
+
+.search-form__input-control--minus::before {
+  top: 18px;
+  left: 13px;
+  width: 12px;
+  height: 3px;
+}
+
+.search-form__input-control--plus::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 13px;
+  width: 11px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #a9a9a9;
+}
+
+.search-form__column--2 .search-form__label {
+  text-align: right;
+  padding-right: 26px;
+  padding-left: 26px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 16px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+
+  font-weight: 700;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.search__open-btn {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.btn.btn--action {
+  background-color: #766357;
+}
+
+.btn.btn--action:focus,
+.btn.btn--action:hover {
+  background-color: #604e43;
+}
+.btn.btn--action:active {
+  background-color: #503e33;
+}
+
+.btn.btn--large,
+.btn.btn--medium {
+  font-size: 21px;
+  line-height: 26px;
+  padding: 30px 50px;
+}
+
+.btn.btn--medium {
+  padding: 16px 48px;
+}
+
+.search-form__submit {
+  margin-top: 55px;
+  width: 100%;
+}
+
 .page-footer {
   display: flex;
   flex-direction: row;
@@ -369,6 +605,11 @@ input[type="radio"].visually-hidden {
   right: 0px;
   bottom: 0px;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.page-footer__item {
+  width: 33.33%;
+  flex-grow: 1;
 }
 
 .page-footer__hashtag {
@@ -460,9 +701,4 @@ input[type="radio"].visually-hidden {
   width: 115px;
   height: 41px;
   fill: #231f20;
-}
-
-.page-footer__item {
-  width: 33.33%;
-  flex-grow: 1;
 }
