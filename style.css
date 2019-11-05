@@ -370,6 +370,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   z-index: 1;
+  /* opacity: 0; */
 }
 
 .search-form--show {
@@ -383,24 +384,24 @@ input[type="radio"].visually-hidden {
 @keyframes formshow {
   0% {
     transform: translateY(-100%);
-    opacity: 0;
+    /* opacity: 0; */
   }
 
   100% {
     transform: translateY(0);
-    opacity: 1;
+    /* opacity: 1; */
   }
 }
 
 @keyframes formhide {
   0% {
     transform: translateY(0);
+    /* opacity: 1; */
   }
 
   100% {
     transform: translateY(-100%);
-    box-shadow: none;
-    transform-origin: top;
+    /* opacity: 0; */
   }
 }
 
