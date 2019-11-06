@@ -1,18 +1,50 @@
-"use strict";
+'use strict';
 
-var searchOpen = document.querySelector(".search__open-btn");
-var searchForm = document.querySelector(".search-form");
-var checkIn = searchForm.querySelector("[name=check-in]");
+var mapElement = document.getElementById('map');
+var searchOpen = document.querySelector('.search__open-btn');
+var searchForm = document.querySelector('.search-form');
+var checkIn = searchForm.querySelector('[name=check-in]');
 
 if (searchOpen) {
   if (searchForm) {
-    searchForm.classList.add("search-form--hide");
+    searchForm.classList.add('search-form--hide');
   }
 
-  searchOpen.addEventListener("click", function(evt) {
+  searchOpen.addEventListener('click', function(evt) {
     evt.preventDefault();
-    searchForm.classList.toggle("search-form--hide");
-    searchForm.classList.toggle("search-form--show");
+    searchForm.classList.toggle('search-form--show');
+    searchForm.classList.toggle('search-form--hide');
     checkIn.focus();
   });
+}
+
+if (mapElement) {
+  var map = '';
+  google.maps.event.addDomListener(window, 'load', init);
+  google.maps.event.addDomListener(window, 'resize', m_res);
+  function init() {
+    var mapOptions = {
+      zoom: 9,
+      mapTypeControl: false,
+      zoomControl: true,
+      scrollwheel: false,
+      zoomControlOptions: { position: google.maps.ControlPosition.LEFT_TOP },
+      streetViewControl: false,
+      center: new google.maps.LatLng(34.831793, -111.762655)
+    };
+
+    map = new google.maps.Map(mapElement, mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(34.869977, -111.760947),
+      map: map,
+      optimized: false
+    });
+    m_res();
+  }
+
+  function m_res() {
+    google.maps.event.trigger(map, 'resize');
+    map.panTo(new google.maps.LatLng(34.831793, -111.762655));
+  }
 }
