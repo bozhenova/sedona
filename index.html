@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sedona</title>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.min.css" />
+    <link rel="stylesheet" href="style.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic"
       rel="stylesheet"
@@ -62,7 +62,10 @@
 
       <main class="page-main">
         <section class="showcase">
-          
+          <h2 class="visually-hidden">
+            Преимущества Седоны перед Гранд Каньоном
+          </h2>
+
           <img
             class="showcase__img"
             src="img/welcome.png"
@@ -82,8 +85,8 @@
           </div>
         </section>
         <section class="reasons">
-          <ul class="reasons__list">
-            <li class="reasons__item--promo list-item">
+          <div class="reasons__list">
+            <div class="reasons__item--promo list-item">
               <div class="reasons__item-info reasons__item-info--promo">
                 <h3 class="list-item__title list-item__title--town">
                   Настоящий городок
@@ -101,8 +104,8 @@
                   alt="Фото города"
                 />
               </div>
-            </li>
-            <section class="features">
+            </div>
+            <div class="features">
               <ul class="features__list">
                 <li class="features__item features__item--accommodation">
                   <h4 class="features__title">Жилье</h4>
@@ -123,8 +126,8 @@
                   </p>
                 </li>
               </ul>
-            </section>
-            <li class="reasons__item--promo list-item">
+            </div>
+            <div class="reasons__item--promo list-item">
               <div class="reasons__item-img">
                 <img
                   src="img/bridge.jpg"
@@ -142,9 +145,9 @@
                   Да, по нему можно пройти! Если конечно вы осмелитесь
                 </p>
               </div>
-            </li>
+            </div>
             <div class="reasons__wrapper">
-              <div class="reasons__list-wrapper">
+              <ul class="reasons__list reasons__list-wrapper">
                 <li class="reasons__item list-item">
                   <h3 class="list-item__title">Небольшая площадь</h3>
                   <span class="list-item__number"
@@ -172,9 +175,9 @@
                     Большинство едет в Гранд Каньон и толпится там
                   </p>
                 </li>
-              </div>
+              </ul>
             </div>
-          </ul>
+          </div>
         </section>
         <section class="search">
           <div class="search__info">
@@ -193,44 +196,144 @@
               >
                 Поиск гостиницы в Седоне
               </button>
-              <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <form
+                class="search-form"
+                action="https://echo.htmlacademy.ru/"
+                method="get"
+              >
                 <div class="search-form__row">
-                  <label class="search-form__label" for="check-in">Дата заезда</label>
-                  <div class="search-form__input-wrapper search-form__input-wrapper--calendar">
-                    <input class="search-form__input" type="text" placeholder="24 апреля 2017" id="check-in" name="check-in">
-                    <button class="search-form__calendar-btn" type="button" name="calendar">
-                      <svg class="search-form__calendar-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="22"><path d="M19.25 2.025h-2.844V.648c0-.38-.294-.69-.656-.69-.363 0-.656.31-.656.69v1.377h-3.938V.648c0-.38-.294-.69-.655-.69-.362 0-.656.31-.656.69v1.377H5.906V.648c0-.38-.294-.69-.656-.69-.363 0-.657.31-.657.69v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.18.784 22 1.75 22h17.5c.967 0 1.75-.82 1.75-1.836V3.862c0-1.015-.783-1.837-1.75-1.837zm.438 18.14c0 .252-.195.458-.437.458H1.75c-.24 0-.438-.206-.438-.46v-16.3c0-.254.196-.46.438-.46h2.844V4.78c0 .382.294.69.657.69.363 0 .657-.308.657-.69V3.404h3.938V4.78c0 .382.294.69.657.69.36 0 .655-.308.655-.69V3.404h3.938V4.78c0 .382.293.69.656.69.363 0 .657-.308.657-.69V3.404h2.845c.24 0 .437.206.437.46v16.3z"/><path d="M4.594 8.225H7.22v2.066H4.593zm0 3.443H7.22v2.067H4.593zm0 3.444H7.22v2.066H4.593zm4.594 0h2.625v2.066H9.188zm0-3.444h2.625v2.067H9.188zm0-3.443h2.625v2.066H9.188zm4.592 6.887h2.626v2.066H13.78zm0-3.444h2.626v2.067H13.78zm0-3.443h2.626v2.066H13.78z"/></svg>
+                  <label class="search-form__label" for="check-in"
+                    >Дата заезда</label
+                  >
+                  <div
+                    class="search-form__input-wrapper search-form__input-wrapper--calendar"
+                  >
+                    <input
+                      class="search-form__input"
+                      type="text"
+                      placeholder="24 апреля 2017"
+                      id="check-in"
+                      name="check-in"
+                    />
+                    <button
+                      class="search-form__calendar-btn"
+                      type="button"
+                      name="calendar"
+                    >
+                      <svg
+                        class="search-form__calendar-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="22"
+                      >
+                        <path
+                          d="M19.25 2.025h-2.844V.648c0-.38-.294-.69-.656-.69-.363 0-.656.31-.656.69v1.377h-3.938V.648c0-.38-.294-.69-.655-.69-.362 0-.656.31-.656.69v1.377H5.906V.648c0-.38-.294-.69-.656-.69-.363 0-.657.31-.657.69v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.18.784 22 1.75 22h17.5c.967 0 1.75-.82 1.75-1.836V3.862c0-1.015-.783-1.837-1.75-1.837zm.438 18.14c0 .252-.195.458-.437.458H1.75c-.24 0-.438-.206-.438-.46v-16.3c0-.254.196-.46.438-.46h2.844V4.78c0 .382.294.69.657.69.363 0 .657-.308.657-.69V3.404h3.938V4.78c0 .382.294.69.657.69.36 0 .655-.308.655-.69V3.404h3.938V4.78c0 .382.293.69.656.69.363 0 .657-.308.657-.69V3.404h2.845c.24 0 .437.206.437.46v16.3z"
+                        />
+                        <path
+                          d="M4.594 8.225H7.22v2.066H4.593zm0 3.443H7.22v2.067H4.593zm0 3.444H7.22v2.066H4.593zm4.594 0h2.625v2.066H9.188zm0-3.444h2.625v2.067H9.188zm0-3.443h2.625v2.066H9.188zm4.592 6.887h2.626v2.066H13.78zm0-3.444h2.626v2.067H13.78zm0-3.443h2.626v2.066H13.78z"
+                        />
+                      </svg>
                     </button>
                   </div>
                 </div>
                 <div class="search-form__row">
-                  <label class="search-form__label" for="check-out">Дата выезда</label>
-                  <div class="search-form__input-wrapper search-form__input-wrapper--calendar">
-                    <input class="search-form__input" type="text" placeholder="4 июля 2017" id="check-out" name="check-out">
-                    <button class="search-form__calendar-btn" type="button" name="calendar">
-                     <svg class="search-form__calendar-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="22"><path d="M19.25 2.025h-2.844V.648c0-.38-.294-.69-.656-.69-.363 0-.656.31-.656.69v1.377h-3.938V.648c0-.38-.294-.69-.655-.69-.362 0-.656.31-.656.69v1.377H5.906V.648c0-.38-.294-.69-.656-.69-.363 0-.657.31-.657.69v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.18.784 22 1.75 22h17.5c.967 0 1.75-.82 1.75-1.836V3.862c0-1.015-.783-1.837-1.75-1.837zm.438 18.14c0 .252-.195.458-.437.458H1.75c-.24 0-.438-.206-.438-.46v-16.3c0-.254.196-.46.438-.46h2.844V4.78c0 .382.294.69.657.69.363 0 .657-.308.657-.69V3.404h3.938V4.78c0 .382.294.69.657.69.36 0 .655-.308.655-.69V3.404h3.938V4.78c0 .382.293.69.656.69.363 0 .657-.308.657-.69V3.404h2.845c.24 0 .437.206.437.46v16.3z"/><path d="M4.594 8.225H7.22v2.066H4.593zm0 3.443H7.22v2.067H4.593zm0 3.444H7.22v2.066H4.593zm4.594 0h2.625v2.066H9.188zm0-3.444h2.625v2.067H9.188zm0-3.443h2.625v2.066H9.188zm4.592 6.887h2.626v2.066H13.78zm0-3.444h2.626v2.067H13.78zm0-3.443h2.626v2.066H13.78z"/></svg>
+                  <label class="search-form__label" for="check-out"
+                    >Дата выезда</label
+                  >
+                  <div
+                    class="search-form__input-wrapper search-form__input-wrapper--calendar"
+                  >
+                    <input
+                      class="search-form__input"
+                      type="text"
+                      placeholder="4 июля 2017"
+                      id="check-out"
+                      name="check-out"
+                    />
+                    <button
+                      class="search-form__calendar-btn"
+                      type="button"
+                      name="calendar"
+                    >
+                      <svg
+                        class="search-form__calendar-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="22"
+                      >
+                        <path
+                          d="M19.25 2.025h-2.844V.648c0-.38-.294-.69-.656-.69-.363 0-.656.31-.656.69v1.377h-3.938V.648c0-.38-.294-.69-.655-.69-.362 0-.656.31-.656.69v1.377H5.906V.648c0-.38-.294-.69-.656-.69-.363 0-.657.31-.657.69v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.18.784 22 1.75 22h17.5c.967 0 1.75-.82 1.75-1.836V3.862c0-1.015-.783-1.837-1.75-1.837zm.438 18.14c0 .252-.195.458-.437.458H1.75c-.24 0-.438-.206-.438-.46v-16.3c0-.254.196-.46.438-.46h2.844V4.78c0 .382.294.69.657.69.363 0 .657-.308.657-.69V3.404h3.938V4.78c0 .382.294.69.657.69.36 0 .655-.308.655-.69V3.404h3.938V4.78c0 .382.293.69.656.69.363 0 .657-.308.657-.69V3.404h2.845c.24 0 .437.206.437.46v16.3z"
+                        />
+                        <path
+                          d="M4.594 8.225H7.22v2.066H4.593zm0 3.443H7.22v2.067H4.593zm0 3.444H7.22v2.066H4.593zm4.594 0h2.625v2.066H9.188zm0-3.444h2.625v2.067H9.188zm0-3.443h2.625v2.066H9.188zm4.592 6.887h2.626v2.066H13.78zm0-3.444h2.626v2.067H13.78zm0-3.443h2.626v2.066H13.78z"
+                        />
+                      </svg>
                     </button>
                   </div>
                 </div>
                 <div class="search-form__row search-form__row--columns">
                   <div class="search-form__column  search-form__column--1">
-                    <label class="search-form__label" for="adults">Взрослые</label>
-                    <div class="search-form__input-wrapper search-form__input-wrapper--counter">
-                      <button class="search-form__input-control search-form__input-control--minus" type="button"><span class="visually-hidden">Уменьшить</span></button>
-                      <input class="search-form__input" type="text" value="2" id="adults" name="adults">
-                      <button class="search-form__input-control search-form__input-control--plus" type="button"><span class="visually-hidden">Увеличить</span></button>
+                    <label class="search-form__label" for="adults"
+                      >Взрослые</label
+                    >
+                    <div
+                      class="search-form__input-wrapper search-form__input-wrapper--counter"
+                    >
+                      <button
+                        class="search-form__input-control search-form__input-control--minus"
+                        type="button"
+                      >
+                        <span class="visually-hidden">Уменьшить</span>
+                      </button>
+                      <input
+                        class="search-form__input"
+                        type="text"
+                        value="2"
+                        id="adults"
+                        name="adults"
+                      />
+                      <button
+                        class="search-form__input-control search-form__input-control--plus"
+                        type="button"
+                      >
+                        <span class="visually-hidden">Увеличить</span>
+                      </button>
                     </div>
                   </div>
                   <div class="search-form__column  search-form__column--2">
                     <label class="search-form__label" for="kids">Дети</label>
-                    <div class="search-form__input-wrapper  search-form__input-wrapper--counter">
-                      <button class="search-form__input-control  search-form__input-control--minus" type="button"><span class="visually-hidden">Увеличить</span></button>
-                      <input class="search-form__input" type="text" value="0" id="kids" name="kids">
-                      <button class="search-form__input-control  search-form__input-control--plus" type="button"><span class="visually-hidden">Уменьшить</span></button>
+                    <div
+                      class="search-form__input-wrapper  search-form__input-wrapper--counter"
+                    >
+                      <button
+                        class="search-form__input-control  search-form__input-control--minus"
+                        type="button"
+                      >
+                        <span class="visually-hidden">Увеличить</span>
+                      </button>
+                      <input
+                        class="search-form__input"
+                        type="text"
+                        value="0"
+                        id="kids"
+                        name="kids"
+                      />
+                      <button
+                        class="search-form__input-control  search-form__input-control--plus"
+                        type="button"
+                      >
+                        <span class="visually-hidden">Уменьшить</span>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <button class="search-form__submit  btn  btn--medium" type="submit" name="search-submit">Найти</button>
+                <button
+                  class="search-form__submit  btn  btn--medium"
+                  type="submit"
+                  name="search-submit"
+                >
+                  Найти
+                </button>
               </form>
             </div>
             <section class="map">
@@ -293,10 +396,7 @@
         </div>
       </footer>
     </div>
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"
-    ></script>
-    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
+    <script src="script.min.js"></script>
   </body>
 </html>
