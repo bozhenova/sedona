@@ -15,7 +15,7 @@ body {
   padding: 0;
   margin: 0;
 
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -30,8 +30,8 @@ img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -157,13 +157,14 @@ input[type='radio'].visually-hidden {
 }
 
 .showcase::after {
-  content: '';
+  content: "";
 
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
-  background: url('img/showcase-decoration.png') center bottom / 100% no-repeat;
+  bottom: -2px;
+  background: url("../img/showcase-decoration.png") center bottom / 100%
+    no-repeat;
   width: 100%;
   height: 57px;
   z-index: 1;
@@ -324,9 +325,9 @@ input[type='radio'].visually-hidden {
 }
 
 .features__item--accommodation::before {
-  content: '';
+  content: "";
   position: absolute;
-  background: url('img/accommodation.svg') center top no-repeat;
+  background: url("../img/accommodation.svg") center top no-repeat;
   width: 75px;
   height: 72px;
   top: 4px;
@@ -335,9 +336,9 @@ input[type='radio'].visually-hidden {
 }
 
 .features__item--food::before {
-  content: '';
+  content: "";
   position: absolute;
-  background: url('img/food.svg') center top no-repeat;
+  background: url("../img/food.svg") center top no-repeat;
   width: 74px;
   height: 70px;
   top: 4px;
@@ -346,9 +347,9 @@ input[type='radio'].visually-hidden {
 }
 
 .features__item--souvenirs::before {
-  content: '';
+  content: "";
   position: absolute;
-  background: url('img/souvenirs.svg') center top no-repeat;
+  background: url("../img/souvenirs.svg") center top no-repeat;
   width: 64px;
   height: 76px;
   top: 4px;
@@ -654,7 +655,7 @@ input[type='radio'].visually-hidden {
 .search-form__input-control--minus::before,
 .search-form__input-control--plus::after,
 .search-form__input-control--plus::before {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 1px;
   background-color: #a9a9a9;
@@ -852,7 +853,7 @@ input[type='radio'].visually-hidden {
 }
 
 .social__link::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
 }
@@ -862,14 +863,14 @@ input[type='radio'].visually-hidden {
   left: 15px;
   width: 17px;
   height: 15px;
-  background: url('img/twitter.svg') center center no-repeat;
+  background: url("../img/twitter.svg") center center no-repeat;
 }
 .social__link--fb::before {
   top: 13px;
   left: 17px;
   width: 12px;
   height: 22px;
-  background: url('img/fb-icon.svg') center center no-repeat;
+  background: url("../img/fb-icon.svg") center center no-repeat;
 }
 
 .social__link--yt::before {
@@ -877,7 +878,7 @@ input[type='radio'].visually-hidden {
   left: 13px;
   width: 20px;
   height: 16px;
-  background: url('img/youtube.svg') center center no-repeat;
+  background: url("../img/youtube.svg") center center no-repeat;
 }
 
 .developer {
@@ -926,7 +927,8 @@ input[type='radio'].visually-hidden {
 }
 
 .filters {
-  background: #83accb url('img/bg-filters.jpg') center center / 100% no-repeat;
+  background: #83accb url("../img/bg-filters.jpg") center center / 100%
+    no-repeat;
   padding: 27px 0 30px;
   min-height: 217px;
   color: #ffffff;
@@ -991,18 +993,18 @@ input[type='radio'].visually-hidden {
 }
 
 .filters__checkbox-label::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   top: 0px;
   left: 0px;
   width: 23px;
   height: 23px;
-  background: url('img/checkbox-off.svg') left top / 23px 23px no-repeat;
+  background: url("../img/checkbox-off.svg") left top / 23px 23px no-repeat;
 }
 
 .filters__checkbox:checked ~ .filters__checkbox-label::before {
-  background-image: url('img/checkbox-on.svg');
+  background-image: url("../img/checkbox-on.svg");
   background-size: 27px 23px;
   width: 27px;
   height: 23px;
@@ -1076,7 +1078,7 @@ input[type='radio'].visually-hidden {
 }
 
 .filters__price-label:nth-child(2)::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   top: -1px;
@@ -1363,7 +1365,7 @@ input[type='radio'].visually-hidden {
   height: 17px;
   text-indent: -1000px;
   overflow: hidden;
-  background: url('img/star.svg') left top / 18px 17px no-repeat;
+  background: url("../img/star.svg") left top / 18px 17px no-repeat;
 }
 
 .star + .star {
